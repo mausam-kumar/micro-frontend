@@ -16,9 +16,10 @@ const MarketingApp = () => {
             }
         })
         if (onParentNavigate) {
+            console.log(history)
             history.listen(onParentNavigate)
         }
-    }, [])
+    }, [ref.current])
 
     return <div ref={ref} />
 };
